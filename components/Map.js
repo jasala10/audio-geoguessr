@@ -78,7 +78,7 @@ export default function Map() {
 
   useEffect(() => {
     if (map.current) return;
-    maptilersdk.config.apiKey = 'NEXT_PUBLIC_MAPTILER_KEY';
+    maptilersdk.config.apiKey = process.env.NEXT_PUBLIC_MAPTILER_KEY;
     map.current = new maptilersdk.Map({
       container: mapContainer.current,
       style: maptilersdk.MapStyle.DATAVIZ.DARK,
